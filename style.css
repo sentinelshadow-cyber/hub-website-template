@@ -1,0 +1,58 @@
+/* ===== Shadow Hub — shared theme ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a12;--bg2:#10101c;--card:#151524;--border:#23233a;
+  --purple:#8b5cf6;--cyan:#22d3ee;--text:#e5e7eb;--muted:#9ca3af;
+}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--cyan);text-decoration:none}
+h2{font-size:2rem;margin-bottom:1.5rem;text-align:center}
+h3{margin-bottom:.5rem}
+.accent{background:linear-gradient(90deg,var(--purple),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem;background:rgba(10,10,18,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.logo{font-weight:800;font-size:1.25rem;color:#fff;letter-spacing:.05em}
+.logo span{color:var(--purple)}
+.logo-img{height:32px;width:auto;vertical-align:middle;display:inline-block}
+.nav nav{display:flex;gap:1.4rem}
+.nav nav a{color:var(--muted);font-size:.92rem;font-weight:600;transition:color .2s}
+.nav nav a:hover,.nav nav a.active{color:#fff}
+.nav-cta{display:flex;gap:.6rem}
+
+/* Buttons */
+.btn{display:inline-block;padding:.75rem 1.6rem;border-radius:.6rem;font-weight:700;font-size:.95rem;color:#fff;background:linear-gradient(90deg,var(--purple),#6d28d9);border:1px solid transparent;transition:transform .15s,opacity .15s}
+.btn:hover{transform:translateY(-2px);opacity:.9}
+.btn.ghost{background:transparent;border-color:var(--border);color:var(--text)}
+.btn.small{padding:.45rem 1rem;font-size:.85rem}
+
+/* Hero */
+.hero{position:relative;text-align:center;padding:7rem 2rem 5rem}
+.hero .glow{position:absolute;inset:0;background:radial-gradient(600px 300px at 50% 0%,rgba(139,92,246,.25),transparent 70%);pointer-events:none}
+.hero h1{font-size:3.2rem;font-weight:800;margin-bottom:1rem}
+.tagline{color:var(--muted);font-size:1.15rem;margin-bottom:2rem}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* Sections */
+.section{max-width:1100px;margin:0 auto;padding:4rem 2rem}
+.section.alt{border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.center{text-align:center}
+.about-grid,.projects-grid{display:grid;gap:1.2rem}
+.about-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.projects-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1.6rem;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--purple);transform:translateY(-3px)}
+.card ul{list-style:none;margin-top:.5rem}
+.card ul li{color:var(--muted);padding:.2rem 0}
+.mini-links{display:flex;flex-direction:column;gap:.4rem;margin-top:.8rem}
+.proj-icon{font-size:2rem;margin-bottom:.6rem}
+.project .btn{margin-top:.8rem}
+.connect{padding-bottom:6rem}
+
+/* Footer */
+footer{border-top:1px solid var(--border);text-align:center;padding:2rem;color:var(--muted);font-size:.85rem}
+
+@media(max-width:720px){
+  .nav{flex-wrap:wrap;gap:.6rem}
+  .hero h1{font-size:2.2rem}
+}
